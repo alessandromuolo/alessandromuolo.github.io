@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal academic website of Alessandro Muolo, Economist and PhD Candidate at GSSI.">
+  <title>Alessandro Muolo | Economist</title>
+
+  <style>
+    :root {
+      --ink: #333638;
+      --muted: #777b80;
+      --accent: #ab7258;
+      --line: #e9e8e6;
+      --paper: #ffffff;
+      --soft: #f8f7f5;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* TOP MENU */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1240px;
+      margin: auto;
+      padding: 27px 40px;
+    }
+    .brand {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 22px;
+    }
+    nav {
+      display: flex;
+      gap: 45px;
+      align-items: center;
+    }
+    nav a {
+      font-size: 15px;
+      color: #606368;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* HOMEPAGE */
+    .hero {
+      display: grid;
+      grid-template-columns: 52% 48%;
+      min-height: 570px;
+      background: #faf9f7;
+    }
+    .hero-art {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(120deg, #f1f0ed, #faf9f7);
+    }
+    .hero-art svg {
+      width: 100%;
+      max-width: 650px;
+      height: auto;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 30px;
+    }
+    h1 {
+      font-size: clamp(36px, 4vw, 55px);
+      line-height: 1.15;
+      margin: 0 0 12px;
+      letter-spacing: -1.5px;
+    }
+    .profession {
+      font-family: Georgia, serif;
+      font-size: 29px;
+      font-style: italic;
+      color: #777;
+      margin: 0;
+    }
+    .affiliation {
+      font-size: 14px;
+      letter-spacing: 0.6px;
+      color: #858585;
+      margin: 17px 0 25px;
+    }
+    .cv-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      padding: 10px 27px;
+      border: 1px solid #d8d4cf;
+      border-radius: 3px;
+      background: white;
+      color: #555;
+      font-size: 16px;
+      transition: 0.2s;
+    }
+    .cv-button:hover {
+      background: var(--ink);
+      color: white;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 26px;
+    }
+    .social-links a {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* CONTENT SECTIONS */
+    .content-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 90px 30px;
+      scroll-margin-top: 20px;
+    }
+    .content-section h2 {
+      font-size: 30px;
+      letter-spacing: -0.5px;
+      margin: 0 0 25px;
+    }
+    .content-section p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.95;
+    }
+    .research-item {
+      padding: 23px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .research-item h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 5px;
+    }
+    .research-item p { margin: 0; font-size: 15px; }
+    #about { background: var(--soft); }
+    #about .content-section { padding-top: 85px; padding-bottom: 85px; }
+
+    footer {
+      text-align: center;
+      padding: 35px 15px;
+      border-top: 1px solid var(--line);
+      color: #999;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 750px) {
+      header { padding: 22px; flex-wrap: wrap; gap: 15px; }
+      nav { gap: 22px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-art { height: 250px; }
+      .hero-art svg { max-width: 350px; }
+      .hero-content { padding: 50px 20px 65px; }
+      .content-section { padding: 60px 25px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <a class="brand" href="#home">Alessandro Muolo</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <main>
+    <section class="hero" id="home">
+
+      <!-- Decorative desk lamp -->
+      <div class="hero-art">
+        <svg viewBox="0 0 650 600" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Minimalist desk lamp illustration">
+          <defs>
+            <linearGradient id="lampmetal" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#e5e6e5"/>
+              <stop offset="55%" stop-color="#a4a7a6"/>
+              <stop offset="100%" stop-color="#e9e9e7"/>
+            </linearGradient>
+            <linearGradient id="lampshade" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#bfc2c2"/>
+              <stop offset="50%" stop-color="#f0f0ee"/>
+              <stop offset="100%" stop-color="#a9adac"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Table shadow -->
+          <ellipse cx="110" cy="575" rx="145" ry="13"
+                   fill="#b7b7b7" opacity=".18"/>
+
+          <!-- Lamp base and arms -->
+          <path d="M18 558 L155 382"
+                stroke="#919595" stroke-width="17"
+                stroke-linecap="round"/>
+          <path d="M34 565 L171 392"
+                stroke="#e0e1df" stroke-width="5"
+                stroke-linecap="round"/>
+          <path d="M155 382 L354 222"
+                stroke="#919595" stroke-width="15"
+                stroke-linecap="round"/>
+          <path d="M166 376 L363 218"
+                stroke="#e2e3e1" stroke-width="5"
+                stroke-linecap="round"/>
+
+          <!-- Joints -->
+          <circle cx="155" cy="382" r="20" fill="url(#lampmetal)"/>
+          <circle cx="155" cy="382" r="6" fill="#737777"/>
+          <circle cx="354" cy="222" r="17" fill="url(#lampmetal)"/>
+          <circle cx="354" cy="222" r="5" fill="#737777"/>
+
+          <!-- Lamp neck -->
+          <path d="M354 222 L382 166"
+                stroke="#9fa3a2" stroke-width="18"
+                stroke-linecap="round"/>
+
+          <!-- Shade -->
+          <path d="M360 160 C360 105 398 85 434 85
+                   C478 85 496 117 503 162
+                   L532 258 Q428 292 318 259 Z"
+                fill="url(#lampshade)"
+                stroke="#c4c6c5"
+                stroke-width="2"/>
+          <path d="M318 259 Q428 292 532 258"
+                fill="none" stroke="#979b99"
+                stroke-width="5"/>
+
+          <!-- Power cable -->
+          <path d="M381 100 C357 52 321 80 329 127
+                   C333 157 351 173 338 212"
+                fill="none" stroke="#626765"
+                stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <h1>Alessandro Muolo</h1>
+        <p class="profession">Economist</p>
+        <p class="affiliation">PhD Candidate · Gran Sasso Science Institute</p>
+
+        <a href="cv.pdf" class="cv-button" download>
+          &#8595; &nbsp; Curriculum Vitae
+        </a>
+
+        <div class="social-links">
+          <a href="mailto:alessandro.muolo@gssi.it">Email</a>
+          <a href="https://scholar.google.com/scholar?q=Alessandro+Muolo"
+             target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://www.linkedin.com/search/results/people/?keywords=Alessandro%20Muolo"
+             target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="content-section">
+      <h2>Research</h2>
+      <p>
+        My research interests lie at the intersection of
+        urban economics, regional science and economic geography,
+        with a particular focus on the spatial organisation
+        and long-run evolution of urban systems.
+      </p>
+
+      <div class="research-item">
+        <h3>Urban Systems and Zipf's Law</h3>
+        <p>
+          City-size distributions, urban hierarchies and
+          their evolution across space and time.
+        </p>
+      </div>
+
+      <div class="research-item">
+        <h3>Polycentricity and Metropolitan Structure</h3>
+        <p>
+          The spatial organisation of economic activities,
+          urban centres and metropolitan development.
+        </p>
+      </div>
+
+      <div class="research-item">
+        <h3>Regional Development and Spatial Economics</h3>
+        <p>
+          Spatial inequalities, infrastructure,
+          regional economic dynamics and urban growth.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="content-section">
+        <h2>About</h2>
+        <p>
+          I am an Economist and PhD Candidate in Regional
+          Science and Economic Geography at the Gran Sasso
+          Science Institute (GSSI), Italy.
+        </p>
+        <p>
+          My research focuses on urban and regional economics,
+          combining spatial analysis and quantitative methods
+          to investigate urban development, regional disparities
+          and the evolution of city systems.
+        </p>
+        <p>
+          For academic enquiries, please contact me at
+          <a href="mailto:alessandro.muolo@gssi.it">
+            alessandro.muolo@gssi.it
+          </a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Alessandro Muolo · Personal Academic Website
+  </footer>
+
+</body>
+</html>
